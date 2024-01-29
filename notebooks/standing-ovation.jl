@@ -85,7 +85,7 @@
             folium.Polygon(locations=coords, fill=true, color=group_color, fill_opacity=0.6).add_to(folium_map)
         end
 
-        save_name = "../StandingOvation/results_html/carte_$(step).html"
+        save_name = "../results_html/carte_$(step).html"
         folium_map.save(save_name)
     end
 
@@ -304,7 +304,7 @@
 
     # ╔═╡ c34578ac-7db0-4365-96e2-bce5a8426aee
     abmvideo(
-        "../StandingOvation/videos/standing_ovation.mp4", modelStandingOvation_, agent_step!;
+        "../videos/standing_ovation.mp4", modelStandingOvation_, agent_step!;
         ac = groupcolor, am = groupmarker, as = 10,
         framerate = 4, frames = etapes,
         title = "Standing Ovations's model",
@@ -333,7 +333,7 @@
         title!("Nombre d'agents debout et assis au fil de la simulation")
 
         Plots.plot!(size=(800, 800))
-        savefig( "../StandingOvation/plots/evolution_standing_ovation.png")
+        savefig( "../plots/evolution_standing_ovation.png")
     end
 
     # ╔═╡ c3d4efe5-cdb0-45d0-b754-93174a011d2a
@@ -419,7 +419,7 @@
 
     # ╔═╡ 6cca8e01-da73-41cd-a474-945e0a29fdc3
     # Enregistrer les résultats
-    CSV.write("../StandingOvation/data/exp_pro/statistiques.csv", result_df)
+    CSV.write("../data/exp_pro/statistiques.csv", result_df)
 
     # ╔═╡ 00000000-0000-0000-0000-000000000001
     PLUTO_PROJECT_TOML_CONTENTS = """
